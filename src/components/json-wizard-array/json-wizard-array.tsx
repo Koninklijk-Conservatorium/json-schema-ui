@@ -13,23 +13,26 @@ export class JsonWizardArray extends JsonSchemaParser {
 
   @Prop() schema: JSONSchemaObject;
   @Prop() name: string;
-  @State() items = []; // by ID.
+  @State() items: UUID[] = [];
 
-  parseItem(itemID: UUID) {
-    return (
-      <fieldset>
-        {this.parse(this.schema.items, this.name)}
-        <button onClick={e => this.deleteItem(itemID)}>Delete</button>
-      </fieldset>
-    );
+  removeItem(e: Event) {
+    const parent = (e.target as Element).parentElement;
+    const parentID = parent.getAttribute('data-id') as UUID;
+    this.items.splice(this.items.indexOf(parentID));
+    parent.remove();
   }
 
   addItem() {
     this.items = [...this.items, crypto.randomUUID()];
   }
 
-  deleteItem(item: UUID) {
-    this.items = this.items.filter(id => id !== item); // Is it sustainable?
+  parseItem(itemID: UUID) {
+    return (
+      <fieldset data-id={itemID}>
+        {this.parse(this.schema.items, this.name)}
+        <button onClick={e => this.removeItem(e)}>Delete</button>
+      </fieldset>
+    );
   }
 
   render() {
