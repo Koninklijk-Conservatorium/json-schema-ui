@@ -51,6 +51,7 @@
   "dependencies": {
     "@json-schema-tools/dereferencer": "^1.6.3",
     "@json-schema-tools/meta-schema": "^1.8.0",
+    "@json-schema-tools/reference-resolver": "^1.2.6",
     "@json-schema-tools/traverse": "^1.11.0"
   }
 }

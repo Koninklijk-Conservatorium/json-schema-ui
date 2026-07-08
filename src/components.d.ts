@@ -9,6 +9,7 @@ import { JSONSchemaObject } from "@json-schema-tools/meta-schema";
 export { JSONSchemaObject } from "@json-schema-tools/meta-schema";
 export namespace Components {
     interface JsonWizard {
+        "path"?: string;
         "schema": string;
     }
     interface JsonWizardArray {
@@ -48,6 +49,7 @@ declare namespace LocalJSX {
           * The name of the element, used when submitting an HTML form.
          */
         "name"?: string;
+        "path"?: string;
         "schema"?: string;
     }
     interface JsonWizardArray {
@@ -57,6 +59,7 @@ declare namespace LocalJSX {
 
     interface JsonWizardAttributes {
         "schema": string;
+        "path": string;
     }
     interface JsonWizardArrayAttributes {
         "name": string;

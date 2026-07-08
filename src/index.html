@@ -9,7 +9,17 @@
     <script nomodule src="/build/json-wizard.js"></script>
   </head>
   <body>
-    <json-wizard schema="https://raw.githubusercontent.com/Early-Music-Typesetting/falsobordone-project/refs/heads/main/schemas/falsobordone.schema.json" />
-    <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component>
+    <h1>Document Record.</h1>
+    <json-wizard
+      schema="https://raw.githubusercontent.com/Early-Music-Typesetting/falsobordone-project/refs/heads/main/schemas/falsobordone.schema.json"
+      path="#/definitions/Document"
+    ></json-wizard>
+    <h1>Tonus Record.</h1>
+    <json-wizard
+      schema="https://raw.githubusercontent.com/Early-Music-Typesetting/falsobordone-project/refs/heads/main/schemas/falsobordone.schema.json"
+      path="#/definitions/Tonus"
+    ></json-wizard>
+    <h2>Falsobordone Record.</h2>
+    <json-wizard schema="https://raw.githubusercontent.com/Early-Music-Typesetting/falsobordone-project/refs/heads/main/schemas/falsobordone.schema.json"></json-wizard>
   </body>
 </html>
