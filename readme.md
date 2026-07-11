@@ -1,5 +1,8 @@
 # Json Schema UI
 
+> [!CAUTION]
+> Work in progress.
+
 A library of web components (build with StencilJS) that transforms a JSON schema (draft-07) into a simple UI. This UI consists of simple unstyled standard web components.
 
 Using json-schema-tools as dependencies.
