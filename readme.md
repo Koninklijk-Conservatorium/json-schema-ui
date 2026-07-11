@@ -8,7 +8,7 @@ A library of web components (build with StencilJS) that transforms a JSON schema
 Using json-schema-tools as dependencies.
 
 ```html
-<json-schema-ui href="https://example.com/some-json-schema"></jsonschema>
+<json-schema-ui href="https://example.com/some-json-schema"></json-schema-ui>
 ```
 
 # Extensibility
