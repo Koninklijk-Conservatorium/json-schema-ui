@@ -1,8 +1,8 @@
 {
   "name": "json-schema-ui",
-  "author": "Artur J. Dobija (Engraving Chant)",
+  "author": "Artur J. Dobija (Enchanted Grave)",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A library of web components transforming a JSON schema (draft-07) into a simple UI.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -25,13 +25,13 @@
       "types": "./loader/index.d.ts"
     }
   },
-  "bugs": {
-    "url": "https://github.com/Koninklijk-Conservatorium/json-schema-ui/issues"
-  },
-  "homepage": "https://github.com/Koninklijk-Conservatorium/json-schema-ui",
+  "homepage": "https://github.com/enchanted-grave/json-schema-ui",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Koninklijk-Conservatorium/json-schema-ui"
+    "url": "https://github.com/enchanted-grave/json-schema-ui"
+  },
+  "bugs": {
+    "url": "https://github.com/enchanted-grave/json-schema-ui/issues"
   },
   "files": [
     "dist/",
