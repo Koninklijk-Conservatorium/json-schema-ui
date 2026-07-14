@@ -1,7 +1,7 @@
 {
   "name": "json-schema-ui",
   "author": "Artur J. Dobija (Enchanted Grave)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A library of web components transforming a JSON schema (draft-07) into a simple UI.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
