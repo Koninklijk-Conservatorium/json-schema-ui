@@ -44,9 +44,22 @@ export abstract class JsonSchemaParser {
           <i>{schema.description}</i>
         </div>
         <ul>
-          {Object.entries(schema.properties).map(entry => (
-            <li>{this.parse(entry[1], entry[0])}</li>
-          ))}
+          {Object.entries(schema.properties).map(entry => (<li>
+            {schema.required?.includes(entry[0]) ? this.parse(entry[1], entry[0]) :
+              (<div>
+                <button onClick={(e: Event) => {
+                  const button = e.target as HTMLDivElement
+                  const div = button.nextSibling as HTMLDivElement
+                  const state = div.hidden
+                  div.hidden = !state
+                  button.textContent = `${state ? 'Remove' : 'Add'} ${entry[1].title}`
+                }}>Add {entry[1].title}</button>
+                <div hidden>
+                  {this.parse(entry[1], entry[0])}
+                </div>
+              </div>)
+            }
+          </li>))}
         </ul>
       </div>
     );
